@@ -1,0 +1,74 @@
+<ion-content [fullscreen]="true">
+  <div class="hero">
+    <app-navbar></app-navbar>
+    <div class="principal-container">
+      <div class="principal-container-right">
+        <h1 class="principal-tittle">Mapea el Multiverso</h1>
+        <p class="principal-description">
+          La serie Rick y Morty sigue las desquiciadas aventuras de un genio científico y su nieto, 
+          quienes viajan por el multiverso enfrentando criaturas extrañas, universos imposibles y problemas que ellos mismos crean. 
+          ¡Explora episodios, personajes, curiosidades, teorías y todo lo que necesitas para sumergirte en el caos interdimensional!
+        </p>
+      </div>
+      <div class="principal-container-left">
+        <img src="/assets/img/img-hero.webp" alt="Rick and Morty Principal" class="principal-img">
+      </div>
+    </div>
+    <div class="characters-container">
+      <img src="/assets/img/characters-tittle.webp" class="characters-tittle">
+      <div class="characters-wrapper">
+        <ion-spinner *ngIf="loading" name="crescent"></ion-spinner>
+        <div *ngFor="let character of characters | slice:0:6" class="character-card">
+          <a [routerLink]="['/personaje', character.id]" class="character-link">
+            <img [src]="character.image" alt="{{character.name}}" class="character-img">
+            <h2 class="character-name">{{character.name}}</h2>
+            <p class="character-info">
+              <span *ngIf="character.status === 'Alive'" class="alive"></span>
+              <span *ngIf="character.status === 'Dead'" class="dead"></span>
+              <span *ngIf="character.status === 'unknown'" class="unknown"></span>
+              {{character.status}} - {{character.species}}
+            </p>
+          </a>
+        </div>
+        <ion-button routerLink="" class="explore-btn">
+          Conocer más personajes
+        </ion-button>
+      </div>
+    </div>
+    <div class="characters-container">
+      <img src="/assets/img/episodes-tittle.webp" class="characters-tittle">
+      <div class="characters-wrapper">
+        <ion-spinner *ngIf="loading" name="crescent"></ion-spinner>
+        <div *ngFor="let episode of episodes | slice:0:6" class="character-card">
+          <a [routerLink]="['/episodio', episode.id]" class="character-link">
+            <h2 class="character-name">{{episode.name}}</h2>
+            <p class="character-info">
+              Episodio: {{episode.episode}}
+            </p>
+          </a>
+        </div>
+        <ion-button routerLink="" class="explore-btn">
+          Conocer más episodios
+        </ion-button>
+      </div>
+    </div>
+    <div class="characters-container">
+      <img src="/assets/img/locations-tittle.webp" class="characters-tittle">
+      <div class="characters-wrapper">
+        <ion-spinner *ngIf="loading" name="crescent"></ion-spinner>
+        <div *ngFor="let location of locations | slice:0:6" class="character-card">
+          <a [routerLink]="['/locacion', location.id]" class="character-link">
+            <h2 class="character-name">{{location.name}}</h2>
+            <p class="character-info">
+              Tipo: {{location.type}}
+            </p>
+          </a>
+        </div>
+        <ion-button routerLink="" class="explore-btn">
+          Conocer más locaciones
+        </ion-button>
+      </div>
+    </div>
+    <img src="/assets/img/img-footer.webp" alt="">
+  </div>
+</ion-content>

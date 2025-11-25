@@ -1,0 +1,30 @@
+<div class="navbar-wrapper">
+  <div class="navbar-container">
+    <img src="/assets/img/logo.webp" alt="Logo">
+    
+    <!-- Links Desktop -->
+    <div class="links desktop-links" *ngIf="!isMobile">
+      <a href="" class="link"><p>Personajes</p></a>
+      <a href="" class="link"><p>Locaciones</p></a>
+      <a href="" class="link"><p>Episodios</p></a>
+    </div>
+    
+    <!-- Botón hamburguesa -->
+    <button class="menu-toggle" *ngIf="isMobile" (click)="toggleMenu()" [class.active]="isMenuOpen">
+      <span class="bar"></span>
+      <span class="bar"></span>
+      <span class="bar"></span>
+    </button>
+  </div>
+  
+  <!-- Menú Mobile -->
+  <div class="mobile-menu" *ngIf="isMobile && isMenuOpen">
+    <div class="mobile-links">
+      <a href="" class="link" (click)="closeMenu()"><p>Personajes</p></a>
+      <a href="" class="link" (click)="closeMenu()"><p>Locaciones</p></a>
+      <a href="" class="link" (click)="closeMenu()"><p>Episodios</p></a>
+    </div>
+  </div>
+  
+  <div class="overlay" *ngIf="isMobile && isMenuOpen" (click)="closeMenu()"></div>
+</div>
