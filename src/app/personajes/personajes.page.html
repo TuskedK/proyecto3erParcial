@@ -1,0 +1,35 @@
+<ion-content [fullscreen]="true">
+  <div class="hero">
+    <app-navbar></app-navbar>
+    <div class="principal-container">
+      <div class="principal-container-right">
+        <h1 class="principal-tittle">Personajes del multiverso</h1>
+        <p class="principal-description">
+          Explora el vasto catálogo de personajes que existen dentro del multiverso de Rick and Morty. Desde científicos geniales y peligrosos, hasta alienígenas absurdos y sociedades enteras que funcionan de forma inexplicable. Aquí podrás descubrir quiénes son, de dónde vienen y por qué son tan memorables.
+        </p>
+      </div>
+      <div class="principal-container-left">
+        <img src="/assets/img/img-hero-personajes.webp" alt="Rick and Morty Principal" class="principal-img">
+      </div>
+    </div>
+    <div class="characters-container">
+      <img src="/assets/img/characters-tittle.webp" class="characters-tittle">
+      <div class="characters-wrapper">
+        <ion-spinner *ngIf="loading" name="crescent"></ion-spinner>
+        <div *ngFor="let character of characters" class="character-card">
+          <a [routerLink]="['/personaje', character.id]" class="character-link">
+            <img [src]="character.image" alt="{{character.name}}" class="character-img">
+            <h2 class="character-name">{{character.name}}</h2>
+            <p class="character-info">
+              <span *ngIf="character.status === 'Alive'" class="alive"></span>
+              <span *ngIf="character.status === 'Dead'" class="dead"></span>
+              <span *ngIf="character.status === 'unknown'" class="unknown"></span>
+              {{character.status}} - {{character.species}}
+            </p>
+          </a>
+        </div>
+      </div>
+    </div>
+    <img src="/assets/img/img-footer.webp" alt=""/>
+  </div>
+</ion-content>

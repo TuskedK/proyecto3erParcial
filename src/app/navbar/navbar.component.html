@@ -1,12 +1,20 @@
 <div class="navbar-wrapper">
   <div class="navbar-container">
-    <img src="/assets/img/logo.webp" alt="Logo">
+    <a [routerLink]="'/principal'">
+      <img src="/assets/img/logo.webp" alt="Logo">
+    </a>
     
     <!-- Links Desktop -->
     <div class="links desktop-links" *ngIf="!isMobile">
-      <a href="" class="link"><p>Personajes</p></a>
-      <a href="" class="link"><p>Locaciones</p></a>
-      <a href="" class="link"><p>Episodios</p></a>
+      <ion-button routerLink="/personajes" class="link">
+        <p>personajes</p>
+      </ion-button>
+      <ion-button routerLink="/locaciones" class="link">
+        <p>locaciones</p>
+      </ion-button>
+      <ion-button routerLink="/episodios" class="link">
+        <p>episodios</p>
+      </ion-button>
     </div>
     
     <!-- Botón hamburguesa -->
@@ -20,9 +28,15 @@
   <!-- Menú Mobile -->
   <div class="mobile-menu" *ngIf="isMobile && isMenuOpen">
     <div class="mobile-links">
-      <a href="" class="link" (click)="closeMenu()"><p>Personajes</p></a>
-      <a href="" class="link" (click)="closeMenu()"><p>Locaciones</p></a>
-      <a href="" class="link" (click)="closeMenu()"><p>Episodios</p></a>
+      <ion-button class="link" routerLink="/personajes" (click)="closeMenu()">
+          <p>Personajes</p>
+      </ion-button>
+      <ion-button class="link" routerLink="/locaciones" (click)="closeMenu()">
+          <p>Locaciones</p>
+      </ion-button>
+      <ion-button class="link" routerLink="/episodios" (click)="closeMenu()">
+          <p>Episodios</p>
+      </ion-button>
     </div>
   </div>
   

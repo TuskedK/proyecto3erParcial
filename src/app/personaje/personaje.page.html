@@ -1,3 +1,30 @@
 <ion-content [fullscreen]="true">
-  
+  <div class="hero">
+    <app-navbar></app-navbar>
+    <div class="presentation-container">
+        <div class="presentation-card">
+            <img src="{{character?.image}}" class="character-img" alt="{{character?.name}}">
+            <h2 class="character-name">{{character?.name}}</h2>
+            <p class="character-info">
+                <span *ngIf="character?.status === 'Alive'" class="alive"></span>
+                <span *ngIf="character?.status === 'Dead'" class="dead"></span>
+                <span *ngIf="character?.status === 'unknown'" class="unknown"></span>
+                {{character?.status}} - {{character?.species}}
+            </p>
+            <p class="character-info">
+                Gender: <br> {{character?.gender}}
+            </p>
+            <p class="character-info">
+                Origin: <br> {{character?.origin?.name}}
+            </p>
+            <p class="character-info">
+                Last known location: <br> {{character?.location?.name}}
+            </p>
+            <ion-button (click)="regresar()" class="explore-btn" expand="true">
+             Regresar
+            </ion-button>
+        </div>
+    </div>
+    <img src="/assets/img/img-footer.webp" alt=""/>
+  </div>
 </ion-content>

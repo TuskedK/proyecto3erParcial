@@ -1,0 +1,31 @@
+<ion-content [fullscreen]="true">
+  <div class="hero">
+    <app-navbar></app-navbar>
+    <div class="principal-container">
+      <div class="principal-container-right">
+        <h1 class="principal-tittle">Catálogo Intergaláctico</h1>
+        <p class="principal-description">
+          Sumérgete en cada episodio del caótico y brillante multiverso de Rick and Morty, donde cada aventura supera a la anterior en locura, creatividad y ciencia ficción desbordada. Recorre temporada por temporada y revive los momentos más memorables, perturbadores y divertidos que han definido a la serie. 
+        </p>
+      </div>
+      <div class="principal-container-left">
+        <img src="/assets/img/img-hero-locaciones.webp" alt="Rick and Morty Principal" class="principal-img">
+      </div>
+    </div>
+    <div class="characters-container">
+      <img src="/assets/img/locations-tittle.webp" class="characters-tittle">
+      <div class="characters-wrapper">
+        <ion-spinner *ngIf="loading" name="crescent"></ion-spinner>
+        <div *ngFor="let location of locations" class="character-card">
+          <a [routerLink]="['/locacion', location.id]" class="character-link">
+            <h2 class="character-name">{{location.name}}</h2>
+            <p class="character-info">
+              Type: {{location.type}}
+            </p>
+          </a>
+        </div>
+      </div>
+    </div>
+    <img src="/assets/img/img-footer.webp" alt=""/>
+  </div>
+</ion-content>

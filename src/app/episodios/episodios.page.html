@@ -1,0 +1,30 @@
+<ion-content [fullscreen]="true">
+  <div class="hero">
+    <app-navbar></app-navbar>
+    <div class="principal-container">
+      <div class="principal-container-right">
+        <h1 class="principal-tittle">Explorando el Multiverso</h1>
+        <p class="principal-description">
+          Explora cada rincón del multiverso de Rick and Morty: desde planetas hostiles hasta dimensiones donde nada tiene sentido. Sumérgete en las localizaciones más icónicas, peligrosas y absurdas del universo, y descubre qué hace especial a cada lugar dentro de esta caótica realidad.        </p>
+      </div>
+      <div class="principal-container-left">
+        <img src="/assets/img/img-hero-episodios.webp" alt="Rick and Morty Principal" class="principal-img">
+      </div>
+    </div>
+    <div class="characters-container">
+      <img src="/assets/img/episodes-tittle.webp" class="characters-tittle">
+      <div class="characters-wrapper">
+        <ion-spinner *ngIf="loading" name="crescent"></ion-spinner>
+        <div *ngFor="let episode of episodes" class="character-card">
+          <a [routerLink]="['/episodio', episode.id]" class="character-link">
+            <h2 class="character-name">{{episode.name}}</h2>
+            <p class="character-info">
+              Episode: {{episode.episode}}
+            </p>
+          </a>
+        </div>
+      </div>
+    </div>
+    <img src="/assets/img/img-footer.webp" alt=""/>
+  </div>
+</ion-content>

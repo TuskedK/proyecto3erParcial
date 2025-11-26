@@ -32,4 +32,16 @@ export const routes: Routes = [
     loadComponent: () => import('./locacion/locacion.page').then( m => m.LocacionPage)
   },
   { path: 'locacion/:id', component: LocacionPage },
+  {
+    path: 'personajes',
+    loadComponent: () => import('./personajes/personajes.page').then( m => m.PersonajesPage)
+  },
+  {
+    path: 'episodios',
+    loadComponent: () => import('./episodios/episodios.page').then( m => m.EpisodiosPage)
+  },
+  {
+    path: 'locaciones',
+    loadComponent: () => import('./locaciones/locaciones.page').then( m => m.LocacionesPage)
+  },
 ];

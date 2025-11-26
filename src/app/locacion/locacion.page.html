@@ -1,13 +1,21 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>locacion</ion-title>
-  </ion-toolbar>
-</ion-header>
-
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">locacion</ion-title>
-    </ion-toolbar>
-  </ion-header>
+  <div class="hero">
+    <app-navbar></app-navbar>
+    <div class="presentation-container">
+        <div class="presentation-card">
+            <img src="/assets/img/television.webp" class="character-img" alt="{{location?.name}}">
+            <h2 class="character-name">{{location?.name}}</h2>
+            <p class="character-info">
+                Type: <br> {{location?.type}}
+            </p>
+            <p class="character-info">
+                Dimension: <br> {{location?.dimension}}
+            </p>
+            <ion-button (click)="regresar()" class="explore-btn" expand="true">
+             Regresar
+            </ion-button>
+        </div>
+    </div>
+    <img src="/assets/img/img-footer.webp" alt=""/>
+  </div>
 </ion-content>

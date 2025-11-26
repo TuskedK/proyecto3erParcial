@@ -185,7 +185,7 @@ a {
   text-align: center;
   margin-top: 5px;
   text-decoration: none; 
-  font-family: 'Playpen Sans', cursive;
+    font-family: 'Playpen Sans', cursive;
 }
 
 .character-info span {
@@ -221,15 +221,6 @@ a {
     margin-right: 5px;
 }
 
-.explore-btn {
-  --background: #55EA12;
-  --border-radius: 8px;
-  --color: #000;
-  font-family: "Playpen Sans", cursive;
-  font-weight: 500;
-}
-
-
 @keyframes floatAnimation {
   0%, 100% {
     transform: translateY(0px);
@@ -239,7 +230,7 @@ a {
   }
 }
 
-// Responsive Design
+
 @media (max-width: 1200px) {
   .hero {
     padding-top: 100px;

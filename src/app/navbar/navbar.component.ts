@@ -1,18 +1,22 @@
 import { Component, OnInit, AfterViewInit, HostListener } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import {IonButton} from '@ionic/angular/standalone';
+import { Router, RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-navbar',
   templateUrl: './navbar.component.html',
   styleUrls: ['./navbar.component.scss'],
   standalone: true,
-  imports: [ CommonModule]
+  imports: [ CommonModule, IonButton, RouterLink]
 })
 export class NavbarComponent implements OnInit, AfterViewInit {
   isMenuOpen = false;
   isMobile = false;
 
-  constructor() { }
+  constructor(
+    private router: Router
+  ) { }
 
   ngOnInit() {}
 

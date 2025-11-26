@@ -70,13 +70,17 @@
 .link {
     text-decoration: none;
     font-family: 'Playfair Display', serif;
-    font-size: 22px;
+    font-size: 18px;
     font-weight: bold;
     color: #FFFFFF;
+    background-color: transparent;
+    transition: all 0.3s ease;
+    position: relative;
+    text-align: center;
+}
 
-    p {
-        margin: 0;
-    }
+ion-button.link {
+    --background: transparent !important;
 }
 
 .link:hover {
@@ -106,14 +110,12 @@
 
         .link {
             width: 100%;
-            padding: 20px 30px;
             border-bottom: 1px solid rgba(57, 123, 150, 0.3);
             font-size: 20px;
             transition: all 0.3s ease;
 
             &:hover {
                 background-color: rgba(66, 180, 202, 0.1);
-                padding-left: 40px;
                 text-decoration: none;
             }
 
@@ -173,7 +175,6 @@
 
         .mobile-links .link {
             font-size: 18px;
-            padding: 18px 25px;
         }
     }
 
