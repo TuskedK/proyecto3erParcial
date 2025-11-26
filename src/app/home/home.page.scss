@@ -1,9 +1,9 @@
-.hero{
-  background-image: url('/assets/img/background-principal.webp');
+.hero-principal{
+  background-image: url('/assets/img/background-principal.webp') !important;
   height: 100%;
 }
 
-.card-container{
+.card-container-principal{
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -12,7 +12,7 @@
   padding: 20px;
 }
 
-.presentation-card{
+.presentation-card-principal{
   width: 100%;
   max-width: 400px;
   box-shadow: 8px 0px 15px 0px #30B7BF;
@@ -22,13 +22,13 @@
   background-color: #01464C;
 }
 
-.card-title{
+.card-title-principal{
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.tittle{
+.tittle-principal{
   color: #FFFFFF;
   font-weight: bold;
   font-size: 20px;
@@ -36,7 +36,7 @@
   font-family: "Playfair Display", serif;
 }
 
-.card-content{
+.card-content-principal{
   color: #FFFFFF;
   font-size: 16px;
   text-align: center;

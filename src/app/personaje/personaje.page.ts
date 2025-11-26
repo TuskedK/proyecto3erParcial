@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
-import { IonContent, IonHeader, IonTitle, IonToolbar, IonSpinner, IonButton} from '@ionic/angular/standalone';
+import { IonContent, IonButton} from '@ionic/angular/standalone';
 import { CharacterService } from '../services/character-service';
 import { ActivatedRoute } from '@angular/router';
 import { NavbarComponent } from '../navbar/navbar.component';
@@ -12,7 +12,7 @@ import { RouterModule } from '@angular/router';
   templateUrl: './personaje.page.html',
   styleUrls: ['./personaje.page.scss'],
   standalone: true,
-  imports: [IonContent, IonHeader, IonTitle, IonToolbar, CommonModule, FormsModule, NavbarComponent, IonSpinner, RouterModule, IonButton]
+  imports: [IonContent, CommonModule, FormsModule, NavbarComponent, RouterModule, IonButton]
 })
 export class PersonajePage implements OnInit {
   character : any = null;

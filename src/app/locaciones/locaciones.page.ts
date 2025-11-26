@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
-import { IonContent, IonHeader, IonTitle, IonToolbar, IonSpinner } from '@ionic/angular/standalone';
+import { IonContent, IonSpinner } from '@ionic/angular/standalone';
 import { NavbarComponent } from '../navbar/navbar.component';
 import { LocationsService } from '../services/locations-service';
 import { RouterModule } from '@angular/router';
@@ -11,7 +11,7 @@ import { RouterModule } from '@angular/router';
   templateUrl: './locaciones.page.html',
   styleUrls: ['./locaciones.page.scss'],
   standalone: true,
-  imports: [IonContent, IonHeader, IonTitle, IonToolbar, CommonModule, FormsModule , NavbarComponent, IonSpinner, RouterModule]
+  imports: [IonContent, CommonModule, FormsModule , NavbarComponent, IonSpinner, RouterModule]
 })
 export class LocacionesPage implements OnInit {
   locations: any[] = [];

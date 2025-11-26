@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
-import { IonContent, IonHeader, IonTitle, IonToolbar, IonSpinner, IonButton} from '@ionic/angular/standalone';
+import { IonContent, IonSpinner, IonButton} from '@ionic/angular/standalone';
 import { NavbarComponent } from '../navbar/navbar.component';
 import { CharactersService } from '../services/characters-service';
 import { EpisodesService } from '../services/episodes-service';
